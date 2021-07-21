@@ -1,0 +1,32 @@
+{
+  "name": "slack-actions-notifier",
+  "version": "1.0.0",
+  "description": "Sends a slack message with GitHub Actions workflow results",
+  "main": "dist/index.js",
+  "scripts": {
+    "watch": "ncc build src/index.js --watch --minify",
+    "build": "ncc build src/index.js --minify",
+    "test": "jest",
+    "test:silent": "jest --silent",
+    "test:watch": "jest --watch --verbose --silent",
+    "test:watch:debug": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flutter-Tech/slack-actions-notifier.git"
+  },
+  "author": "Nuno Crisostomo <nuno.crisostomo@paddypowerbetfair.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flutter-Tech/slack-actions-notifier.git"
+  },
+  "homepage": "https://github.com/Flutter-Tech/slack-actions-notifier#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.7",
+    "@actions/github": "^4.0.0",
+    "@slack/webhook": "^6.0.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}

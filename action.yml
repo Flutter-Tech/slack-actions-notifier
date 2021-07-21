@@ -1,0 +1,22 @@
+name: "Slack Actions Notifier"
+description: "Sends a slack message with GitHub Actions workflow results"
+author: "Nuno Crisostomo <nuno.crisostomo@paddypowerbetfair.com>"
+inputs:
+  slack_webhook_url:
+    description: "Slack Webhook URL"
+    required: true
+  slack_message:
+    description: "Slack message text"
+    required: true
+  action_status:
+    description: "GitHub status"
+    required: false
+  action_text:
+    description: "Text to use in action button"
+    required: false
+  action_url:
+    description: "URL to use in action button"
+    required: false
+runs:
+  using: "node12"
+  main: "dist/index.js"
